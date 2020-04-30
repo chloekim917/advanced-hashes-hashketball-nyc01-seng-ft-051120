@@ -190,9 +190,8 @@ def big_shoe_rebounds
   rebound_number = 0
   game_hash.each do |team, info|
     info[:players].each do |player_hash|
-      size = player_hash[:shoe]
-      if size > big_foot
-        big_foot = size
+      if player_hash[:shoe] > big_foot
+        big_foot = player_hash[:shoe]
         rebound_number = player_hash[:rebounds]
       end
     end
